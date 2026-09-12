@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Translation Evaluation Record",
+  "type": "object",
+  "properties": {
+    "item_id": {"type": "string"},
+    "language": {"type": "string"},
+    "system": {"type": "string"},
+    "semantic_fidelity": {"type": ["integer", "null"], "minimum": 1, "maximum": 5},
+    "pragmatic_fidelity": {"type": ["integer", "null"], "minimum": 1, "maximum": 5},
+    "institutional_fidelity": {"type": ["integer", "null"], "minimum": 1, "maximum": 5},
+    "actionability": {"type": ["integer", "null"], "minimum": 1, "maximum": 5},
+    "error_types": {"type": "array", "items": {"type": "string"}},
+    "reviewer_id": {"type": ["string", "null"]},
+    "adjudicated": {"type": "boolean", "default": false},
+    "notes": {"type": ["string", "null"]}
+  }
+}

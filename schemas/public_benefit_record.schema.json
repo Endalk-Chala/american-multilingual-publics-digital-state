@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Multilingual Public Benefit Communication Record",
+  "type": "object",
+  "required": ["item_id", "jurisdiction", "agency", "source_language", "source_text", "provenance_status"],
+  "properties": {
+    "item_id": {"type": "string"},
+    "country": {"type": ["string", "null"]},
+    "jurisdiction": {"type": "string"},
+    "agency": {"type": "string"},
+    "program": {"type": ["string", "null"]},
+    "benefit_domain": {"type": ["string", "null"]},
+    "communication_channel": {"type": ["string", "null"]},
+    "document_type": {"type": ["string", "null"]},
+    "source_date": {"type": ["string", "null"]},
+    "source_url": {"type": ["string", "null"]},
+    "source_language": {"type": "string"},
+    "target_language": {"type": ["string", "null"]},
+    "source_text": {"type": "string"},
+    "translated_text": {"type": ["string", "null"]},
+    "translation_method": {"type": ["string", "null"], "enum": [null, "official_human", "vendor_human", "machine", "ai_assisted", "unknown"]},
+    "human_review_status": {"type": ["string", "null"], "enum": [null, "none_documented", "discretionary", "required_selected", "required_all_vital", "structured_qa", "unknown"]},
+    "reviewer_qualification": {"type": ["string", "null"]},
+    "risk_level": {"type": ["string", "null"], "enum": [null, "low", "medium", "high"]},
+    "provenance_status": {"type": "string", "enum": ["official_source", "archived_official_source", "secondary_source", "researcher_transcription", "unknown"]},
+    "rights_note": {"type": ["string", "null"]},
+    "notes": {"type": ["string", "null"]}
+  }
+}
